@@ -30,8 +30,6 @@ app
   .use("/payments", paymentsRouter)
   .use(handleApplicationErrors);
 
-
-
 export function init(): Promise<Express> {
   connectDb();
   return Promise.resolve(app);
