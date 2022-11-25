@@ -5,8 +5,8 @@ async function findAllHotels() {
 }
 
 async function checkIfUserHasPaidHotelTicket(userId: number) {
-  return prisma.ticket.findFirst({
-    where: { TicketType: { includesHotel: true, isRemote: false }, Enrollment: { userId } },
+  return prisma.payment.findFirst({
+    where: { Ticket: { TicketType: { includesHotel: true, isRemote: false }, Enrollment: { userId } } },
   });
 }
 

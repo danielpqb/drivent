@@ -1,7 +1,7 @@
 import app, { init } from "@/app";
 import httpStatus from "http-status";
 import supertest from "supertest";
-import { createSession, createUser } from "../factories";
+import { createEnrollmentWithAddress, createSession, createTicket, createTicketType, createUser } from "../factories";
 import { cleanDb, generateValidToken } from "../helpers";
 
 beforeAll(async () => {
@@ -28,11 +28,21 @@ describe("GET /hotels", () => {
   });
 
   describe("when token is valid", async () => {
-    const token = await generateValidToken();
+    const user = await createUser();
+    const token = await generateValidToken(user);
 
-    it("should respond with status 404 if user have no ticket", async () => {
+    it("should respond with status 402 if user doesnt have a hotel ticket paid", async () => {
       const resp = await server.get("/hotels").set("Authorization", `Bearer ${token}`);
-      expect(resp.status).toBe(httpStatus.NOT_FOUND);
+      expect(resp.status).toBe(httpStatus.PAYMENT_REQUIRED);
+    });
+
+    it("should respond with status 200 if user have a hotel ticket paid and return all hotels", async () => {
+      const ticketTypeId = (await createTicketType()).id;
+      const enrollmentId = (await createEnrollmentWithAddress(user)).id;
+      await createTicket(enrollmentId, ticketTypeId, "PAID");
+
+      const resp = await server.get("/hotels").set("Authorization", `Bearer ${token}`);
+      expect(resp.status).toBe(httpStatus.PAYMENT_REQUIRED);
     });
   });
 });
