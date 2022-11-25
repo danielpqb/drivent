@@ -1,7 +1,7 @@
 import app, { init } from "@/app";
 import httpStatus from "http-status";
 import supertest from "supertest";
-import { createEnrollmentWithAddress, createSession, createTicket, createTicketType, createUser } from "../factories";
+import { createEnrollmentWithAddress, createTicket, createTicketType, createUser } from "../factories";
 import { cleanDb, generateValidToken } from "../helpers";
 
 beforeAll(async () => {
@@ -42,7 +42,7 @@ describe("GET /hotels", () => {
       await createTicket(enrollmentId, ticketTypeId, "PAID");
 
       const resp = await server.get("/hotels").set("Authorization", `Bearer ${token}`);
-      expect(resp.status).toBe(httpStatus.PAYMENT_REQUIRED);
+      expect(resp.status).toBe(httpStatus.OK);
     });
   });
 });
