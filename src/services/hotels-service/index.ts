@@ -9,8 +9,16 @@ async function getHotels() {
   return hotels;
 }
 
-async function getAvailableRoomsByHotelId(hotelId: number) {
-  const rooms = await hotelsRepository.findAvailableRoomsWithHotelId(hotelId);
+async function checkIfUserHasPaidHotelTicket(userId: number) {
+  const userHasPaidHotelTicket = await hotelsRepository.checkIfUserHasPaidHotelTicket(userId);
+
+  if (!userHasPaidHotelTicket) return false;
+
+  return true;
+}
+
+async function getRoomsWithHotelId(hotelId: number) {
+  const rooms = await hotelsRepository.getRoomsWithHotelId(hotelId);
 
   if (!rooms) throw notFoundError();
 
@@ -19,7 +27,8 @@ async function getAvailableRoomsByHotelId(hotelId: number) {
 
 const hotelsService = {
   getHotels,
-  getAvailableRoomsByHotelId,
+  checkIfUserHasPaidHotelTicket,
+  getRoomsWithHotelId,
 };
 
 export default hotelsService;
