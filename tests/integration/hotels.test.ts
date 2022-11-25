@@ -1,5 +1,4 @@
 import app, { init } from "@/app";
-import { getHotels } from "@/controllers";
 import faker from "@faker-js/faker";
 import httpStatus from "http-status";
 import supertest from "supertest";
