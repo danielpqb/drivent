@@ -2,13 +2,16 @@ import faker from "@faker-js/faker";
 import { prisma } from "@/config";
 import { TicketStatus } from "@prisma/client";
 
-export async function createTicketType() {
+export async function createTicketType(isRemote: boolean, includesHotel: boolean) {
+  const _isRemote = isRemote === undefined ? faker.datatype.boolean() : isRemote;
+  const _includesHotel = includesHotel === undefined ? faker.datatype.boolean() : includesHotel;
+
   return prisma.ticketType.create({
     data: {
       name: faker.name.findName(),
       price: faker.datatype.number(),
-      isRemote: faker.datatype.boolean(),
-      includesHotel: faker.datatype.boolean(),
+      isRemote: _isRemote,
+      includesHotel: _includesHotel,
     },
   });
 }

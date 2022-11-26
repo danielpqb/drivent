@@ -13,7 +13,7 @@ export async function getHotels(req: AuthenticatedRequest, res: Response) {
     const hotels = await hotelsService.getHotels();
     return res.status(httpStatus.OK).send(hotels);
   } catch (error) {
-    return res.sendStatus(httpStatus.NO_CONTENT);
+    return res.sendStatus(httpStatus.NOT_FOUND);
   }
 }
 
@@ -22,8 +22,13 @@ export async function getRoomsWithHotelId(req: AuthenticatedRequest, res: Respon
 
   try {
     const rooms = await hotelsService.getRoomsWithHotelId(hotelId);
+
+    if (rooms.length === 0) {
+      return res.sendStatus(httpStatus.NO_CONTENT);
+    }
+
     return res.status(httpStatus.OK).send(rooms);
   } catch (error) {
-    return res.sendStatus(httpStatus.NO_CONTENT);
+    return res.sendStatus(httpStatus.NOT_FOUND);
   }
 }

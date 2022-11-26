@@ -17,6 +17,7 @@ export async function createRoom(hotelId: number) {
       name: faker.company.companyName(),
       capacity: faker.datatype.number(),
     },
+    include: { Hotel: true },
   });
 }
 
