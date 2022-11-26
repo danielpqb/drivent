@@ -11,7 +11,7 @@ async function getHotels() {
 
 async function checkIfUserHasPaidHotelTicket(userId: number) {
   const userHasPaidHotelTicket = await hotelsRepository.checkIfUserHasPaidHotelTicket(userId);
-
+  console.log(userHasPaidHotelTicket);
   if (!userHasPaidHotelTicket) return false;
 
   return true;
