@@ -13,17 +13,11 @@ async function getBooking(userId: number) {
 
 async function postBooking(userId: number, roomId: number) {
   const booking = await bookingsRepository.postBooking(userId, roomId);
-
-  if (!booking) throw notFoundError();
-
   return booking;
 }
 
-async function putBooking(userId: number, roomId: number, bookingId: number) {
-  const booking = await bookingsRepository.putBooking(userId, roomId, bookingId);
-
-  if (!booking) throw notFoundError();
-
+async function putBooking(roomId: number, bookingId: number) {
+  const booking = await bookingsRepository.putBooking(roomId, bookingId);
   return booking;
 }
 
