@@ -49,7 +49,7 @@ describe("GET /booking", () => {
       const response = await server.get("/booking").set("Authorization", `Bearer ${token}`);
 
       expect(response.status).toBe(httpStatus.NOT_FOUND);
-      expect(response.body).toEqual([]);
+      expect(response.body).toEqual({});
     });
 
     it("should respond with status 200 if user has a booking", async () => {
@@ -67,6 +67,11 @@ describe("GET /booking", () => {
         ...booking,
         createdAt: booking.createdAt.toISOString(),
         updatedAt: booking.updatedAt.toISOString(),
+        Room: {
+          ...booking.Room,
+          createdAt: booking.Room.createdAt.toISOString(),
+          updatedAt: booking.Room.updatedAt.toISOString(),
+        },
       });
     });
   });

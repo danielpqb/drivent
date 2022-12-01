@@ -39,9 +39,6 @@ async function checkIfRoomIsFull(roomId: number) {
   const room = await bookingsRepository.getRoom(roomId);
   const bookingsCountForRoom = await bookingsRepository.countBookingsForRoomId(roomId);
 
-  console.log("room.capacity:", room.capacity);
-  console.log("bookingsCount:", bookingsCountForRoom._count.id);
-
   if (room.capacity > bookingsCountForRoom._count.id) return false;
 
   return true;
