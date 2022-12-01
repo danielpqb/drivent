@@ -19,6 +19,14 @@ async function postBooking(userId: number, roomId: number) {
   return booking;
 }
 
+async function putBooking(userId: number, roomId: number, bookingId: number) {
+  const booking = await bookingsRepository.putBooking(userId, roomId, bookingId);
+
+  if (!booking) throw notFoundError();
+
+  return booking;
+}
+
 async function checkIfRoomIdExists(roomId: number) {
   const room = await bookingsRepository.getRoom(roomId);
 
@@ -59,6 +67,7 @@ async function checkIfUserCanBook(userId: number) {
 const bookingsService = {
   getBooking,
   postBooking,
+  putBooking,
   checkIfRoomIdExists,
   checkIfRoomIsFull,
   checkIfUserCanBook,

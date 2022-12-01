@@ -41,11 +41,17 @@ export async function postBooking(req: AuthenticatedRequest, res: Response) {
 
 export async function putBooking(req: AuthenticatedRequest, res: Response) {
   const { userId } = req;
+  const bookingId = Number(req.params.bookingId);
   const roomId = Number(req.body.roomId);
 
   try {
-    const booking = await bookingsService.putBooking(userId);
+    const roomExists = await bookingsService.checkIfRoomIdExists(roomId);
+    if (!roomExists) return res.sendStatus(httpStatus.NOT_FOUND);
 
+    const roomIsFull = await bookingsService.checkIfRoomIsFull(roomId);
+    if (roomIsFull) return res.sendStatus(httpStatus.FORBIDDEN);
+
+    const booking = await bookingsService.putBooking(userId, roomId, bookingId);
     return res.status(httpStatus.OK).send(booking);
   } catch (error) {
     if (error.name === "NotFoundError") return res.sendStatus(httpStatus.NOT_FOUND);
