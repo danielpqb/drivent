@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1669926391755" clover="3.2.0">
-  <project timestamp="1669926391755" name="All files">
-    <metrics statements="622" coveredstatements="578" conditionals="89" coveredconditionals="63" methods="104" coveredmethods="95" elements="815" coveredelements="736" complexity="0" loc="622" ncloc="622" packages="26" files="64" classes="64"/>
+<coverage generated="1669928561933" clover="3.2.0">
+  <project timestamp="1669928561933" name="All files">
+    <metrics statements="622" coveredstatements="581" conditionals="89" coveredconditionals="66" methods="104" coveredmethods="95" elements="815" coveredelements="742" complexity="0" loc="622" ncloc="622" packages="26" files="64" classes="64"/>
     <package name="src">
       <metrics statements="22" coveredstatements="16" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="2"/>
       <file name="app.ts" path="/home/daniel/Desktop/Driven/Módulo 5 - TypeScript/drivent/src/app.ts">
@@ -59,7 +59,7 @@
       </file>
     </package>
     <package name="src.controllers">
-      <metrics statements="164" coveredstatements="156" conditionals="23" coveredconditionals="20" methods="16" coveredmethods="16"/>
+      <metrics statements="164" coveredstatements="156" conditionals="23" coveredconditionals="21" methods="16" coveredmethods="16"/>
       <file name="authentication-controller.ts" path="/home/daniel/Desktop/Driven/Módulo 5 - TypeScript/drivent/src/controllers/authentication-controller.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="11" type="stmt"/>
@@ -72,7 +72,7 @@
         <line num="12" count="2" type="stmt"/>
       </file>
       <file name="bookings-controller.ts" path="/home/daniel/Desktop/Driven/Módulo 5 - TypeScript/drivent/src/controllers/bookings-controller.ts">
-        <metrics statements="40" coveredstatements="37" conditionals="9" coveredconditionals="8" methods="3" coveredmethods="3"/>
+        <metrics statements="40" coveredstatements="37" conditionals="9" coveredconditionals="9" methods="3" coveredmethods="3"/>
         <line num="2" count="11" type="stmt"/>
         <line num="4" count="11" type="stmt"/>
         <line num="6" count="11" type="stmt"/>
@@ -83,33 +83,33 @@
         <line num="14" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="15" count="0" type="stmt"/>
         <line num="19" count="11" type="stmt"/>
-        <line num="20" count="5" type="stmt"/>
-        <line num="21" count="5" type="stmt"/>
-        <line num="23" count="5" type="stmt"/>
-        <line num="24" count="5" type="stmt"/>
-        <line num="25" count="5" type="cond" truecount="1" falsecount="0"/>
-        <line num="27" count="4" type="stmt"/>
-        <line num="28" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="30" count="3" type="stmt"/>
-        <line num="31" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="21" count="7" type="stmt"/>
+        <line num="23" count="7" type="stmt"/>
+        <line num="24" count="7" type="stmt"/>
+        <line num="25" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="28" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="30" count="5" type="stmt"/>
+        <line num="31" count="5" type="cond" truecount="1" falsecount="0"/>
         <line num="33" count="2" type="stmt"/>
         <line num="34" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="36" count="1" type="stmt"/>
         <line num="37" count="1" type="stmt"/>
         <line num="39" count="0" type="stmt"/>
         <line num="43" count="11" type="stmt"/>
-        <line num="44" count="4" type="stmt"/>
-        <line num="45" count="4" type="stmt"/>
-        <line num="46" count="4" type="stmt"/>
-        <line num="48" count="4" type="stmt"/>
-        <line num="49" count="4" type="stmt"/>
-        <line num="50" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="52" count="3" type="stmt"/>
-        <line num="53" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="55" count="2" type="stmt"/>
-        <line num="56" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="58" count="1" type="stmt"/>
-        <line num="59" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="44" count="5" type="stmt"/>
+        <line num="45" count="5" type="stmt"/>
+        <line num="46" count="5" type="stmt"/>
+        <line num="48" count="5" type="stmt"/>
+        <line num="49" count="5" type="stmt"/>
+        <line num="50" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="52" count="4" type="stmt"/>
+        <line num="53" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="55" count="3" type="stmt"/>
+        <line num="56" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="59" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="61" count="1" type="stmt"/>
         <line num="62" count="1" type="stmt"/>
         <line num="64" count="0" type="stmt"/>
@@ -320,16 +320,16 @@
         <line num="5" count="11" type="stmt"/>
         <line num="6" count="11" type="stmt"/>
         <line num="8" count="11" type="stmt"/>
-        <line num="9" count="80" type="stmt"/>
-        <line num="10" count="80" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="68" type="stmt"/>
-        <line num="13" count="68" type="cond" truecount="0" falsecount="1"/>
-        <line num="15" count="68" type="stmt"/>
-        <line num="16" count="68" type="stmt"/>
-        <line num="18" count="56" type="stmt"/>
-        <line num="23" count="56" type="cond" truecount="1" falsecount="0"/>
-        <line num="25" count="47" type="stmt"/>
-        <line num="27" count="47" type="stmt"/>
+        <line num="9" count="83" type="stmt"/>
+        <line num="10" count="83" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="71" type="stmt"/>
+        <line num="13" count="71" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="71" type="stmt"/>
+        <line num="16" count="71" type="stmt"/>
+        <line num="18" count="59" type="stmt"/>
+        <line num="23" count="59" type="cond" truecount="1" falsecount="0"/>
+        <line num="25" count="50" type="stmt"/>
+        <line num="27" count="50" type="stmt"/>
         <line num="29" count="12" type="stmt"/>
         <line num="34" count="33" type="stmt"/>
       </file>
@@ -386,11 +386,11 @@
       <file name="index.ts" path="/home/daniel/Desktop/Driven/Módulo 5 - TypeScript/drivent/src/repositories/bookings-repository/index.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
         <line num="1" count="11" type="stmt"/>
-        <line num="4" count="7" type="stmt"/>
+        <line num="4" count="9" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="26" count="16" type="stmt"/>
-        <line num="34" count="7" type="stmt"/>
+        <line num="26" count="22" type="stmt"/>
+        <line num="34" count="10" type="stmt"/>
         <line num="40" count="11" type="stmt"/>
         <line num="48" count="11" type="stmt"/>
       </file>
@@ -400,7 +400,7 @@
       <file name="index.ts" path="/home/daniel/Desktop/Driven/Módulo 5 - TypeScript/drivent/src/repositories/enrollment-repository/index.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="1" count="11" type="stmt"/>
-        <line num="5" count="20" type="stmt"/>
+        <line num="5" count="22" type="stmt"/>
         <line num="14" count="6" type="stmt"/>
         <line num="24" count="2" type="stmt"/>
         <line num="36" count="11" type="stmt"/>
@@ -458,7 +458,7 @@
         <line num="5" count="2" type="stmt"/>
         <line num="9" count="8" type="stmt"/>
         <line num="19" count="3" type="stmt"/>
-        <line num="30" count="13" type="stmt"/>
+        <line num="30" count="15" type="stmt"/>
         <line num="41" count="2" type="stmt"/>
         <line num="49" count="3" type="stmt"/>
         <line num="61" count="11" type="stmt"/>
@@ -654,9 +654,9 @@
       </file>
     </package>
     <package name="src.services.bookings-service">
-      <metrics statements="35" coveredstatements="32" conditionals="11" coveredconditionals="9" methods="8" coveredmethods="8"/>
+      <metrics statements="35" coveredstatements="35" conditionals="11" coveredconditionals="11" methods="8" coveredmethods="8"/>
       <file name="index.ts" path="/home/daniel/Desktop/Driven/Módulo 5 - TypeScript/drivent/src/services/bookings-service/index.ts">
-        <metrics statements="35" coveredstatements="32" conditionals="11" coveredconditionals="9" methods="8" coveredmethods="8"/>
+        <metrics statements="35" coveredstatements="35" conditionals="11" coveredconditionals="11" methods="8" coveredmethods="8"/>
         <line num="1" count="11" type="stmt"/>
         <line num="2" count="11" type="stmt"/>
         <line num="3" count="11" type="stmt"/>
@@ -668,28 +668,28 @@
         <line num="16" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
-        <line num="25" count="9" type="stmt"/>
-        <line num="27" count="9" type="cond" truecount="1" falsecount="0"/>
-        <line num="29" count="7" type="stmt"/>
-        <line num="33" count="7" type="stmt"/>
-        <line num="34" count="7" type="stmt"/>
-        <line num="36" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="25" count="12" type="stmt"/>
+        <line num="27" count="12" type="cond" truecount="1" falsecount="0"/>
+        <line num="29" count="10" type="stmt"/>
+        <line num="33" count="10" type="stmt"/>
+        <line num="34" count="10" type="stmt"/>
+        <line num="36" count="10" type="cond" truecount="1" falsecount="0"/>
         <line num="38" count="2" type="stmt"/>
-        <line num="42" count="3" type="stmt"/>
-        <line num="43" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="42" count="5" type="stmt"/>
+        <line num="43" count="5" type="cond" truecount="1" falsecount="0"/>
         <line num="44" count="1" type="stmt"/>
-        <line num="46" count="2" type="stmt"/>
-        <line num="47" count="2" type="cond" truecount="0" falsecount="1"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="51" count="2" type="cond" truecount="3" falsecount="1"/>
-        <line num="52" count="0" type="stmt"/>
+        <line num="46" count="4" type="stmt"/>
+        <line num="47" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="51" count="3" type="cond" truecount="4" falsecount="0"/>
+        <line num="52" count="1" type="stmt"/>
         <line num="55" count="2" type="stmt"/>
-        <line num="59" count="4" type="stmt"/>
-        <line num="61" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="63" count="2" type="stmt"/>
-        <line num="67" count="1" type="stmt"/>
-        <line num="69" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="71" count="0" type="stmt"/>
+        <line num="59" count="5" type="stmt"/>
+        <line num="61" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="63" count="3" type="stmt"/>
+        <line num="67" count="2" type="stmt"/>
+        <line num="69" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="71" count="1" type="stmt"/>
         <line num="74" count="11" type="stmt"/>
         <line num="85" count="11" type="stmt"/>
       </file>
