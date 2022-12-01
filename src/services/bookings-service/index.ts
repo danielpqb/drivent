@@ -61,6 +61,22 @@ async function checkIfUserCanBook(userId: number) {
   return true;
 }
 
+async function checkIfUserAlreadyHaveBooking(userId: number) {
+  const booking = await bookingsRepository.getBooking(userId);
+
+  if (!booking) return false;
+
+  return true;
+}
+
+async function checkIfUserHaveSpecificBookingId(userId: number, bookingId: number) {
+  const booking = await bookingsRepository.getBooking(userId);
+
+  if (booking.id === bookingId) return true;
+
+  return false;
+}
+
 const bookingsService = {
   getBooking,
   postBooking,
@@ -68,6 +84,8 @@ const bookingsService = {
   checkIfRoomIdExists,
   checkIfRoomIsFull,
   checkIfUserCanBook,
+  checkIfUserAlreadyHaveBooking,
+  checkIfUserHaveSpecificBookingId,
 };
 
 export default bookingsService;
