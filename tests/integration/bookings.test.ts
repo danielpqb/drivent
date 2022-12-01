@@ -182,7 +182,7 @@ describe("POST /booking", () => {
             const response = await server.post("/booking").set("Authorization", `Bearer ${token}`).send(body);
 
             expect(response.status).toBe(httpStatus.OK);
-            expect(response.body.id).toBe(expect.any(Number));
+            expect(response.body.id).toEqual(expect.any(Number));
           });
         });
       });
@@ -293,7 +293,7 @@ describe("PUT /booking/:bookingId", () => {
             .send(body);
 
           expect(response.status).toBe(httpStatus.OK);
-          expect(response.body.id).toBe(expect.any(Number));
+          expect(response.body.id).toEqual(expect.any(Number));
         });
       });
     });
